@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://wom4yg1nybdh"]
+
+[ext_resource type="Material" uid="uid://c4wei40a7f0a1" path="res://Materials/DevMaterial.tres" id="1_sxt1b"]
+[ext_resource type="PackedScene" uid="uid://busw4oxtqr1lw" path="res://Scenes/EntityScenes/PlayerCharacter3D.tscn" id="2_st5hm"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_st5hm"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mlhef"]
+size = Vector2(20, 20)
+
+[node name="TestScene3D" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_st5hm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+material_override = ExtResource("1_sxt1b")
+mesh = SubResource("PlaneMesh_mlhef")
+
+[node name="PlayerCharacter3D" parent="." instance=ExtResource("2_st5hm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3164185, 0, 3.8481379)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.62383866, 0.5339948, -0.57067937, 4.4631587e-08, 0.73018616, 0.6832483, 0.78155315, -0.4262367, 0.45551836, 0, 4.7958746, 0)
+shadow_enabled = true

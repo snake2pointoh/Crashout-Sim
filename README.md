@@ -1,1 +1,1 @@
-# Crashout Sim
+# Crashout Simulator
