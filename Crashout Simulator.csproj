@@ -6,7 +6,8 @@
     <RootNamespace>CrashoutSimulator</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Scripts\Abstracts\" />
     <Folder Include="Scripts\Interfaces\" />
+    <Folder Include="Scripts\PlayerCharacter\States\" />
+    <Folder Include="Scripts\Resources\" />
   </ItemGroup>
 </Project>
